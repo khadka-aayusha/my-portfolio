@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensure the body takes full height */
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-image: url(bg3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #010e2c;
+    padding: 10px;
+}
+
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-links li {
+    margin: 0 15px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+}
+
+/* Main Container */
+.container {
+    flex: 1; /* Pushes the footer down */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile {
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.profile h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.profile p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Footer Section */
+.footer {
+    background: linear-gradient(135deg, #3c8ce7, #00eaff);
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Fixes the footer at the bottom */
+    bottom: 0; /* Ensures the footer stays at the bottom */
+    width: 100%; /* Ensures it spans the full width */
+    z-index: 10; /* Keeps it above other content if necessary */
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icon-link {
+    color: #ffffff;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-link:hover {
+    transform: scale(1.2);
+    color: #f0a500;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile h1 {
+        font-size: 2em;
+    }
+    .profile p {
+        font-size: 1em;
+    }
+    .footer-icons {
+        flex-wrap: wrap;
+    }
+}
